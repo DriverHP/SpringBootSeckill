@@ -16,7 +16,7 @@ public interface SeckillService {
     String startSeckill(long seckillId, long userId);
 
     /**
-     *
+     * 生秒杀
      * @param seckilled
      * @return
      */
@@ -29,4 +29,26 @@ public interface SeckillService {
      * @return
      */
     String startSeckillAopLock(long seckillId, long userId);
+
+    /**
+     * 秒杀 二、数据库悲观锁
+     * @param seckillId
+     * @param userId
+     * @return
+     */
+    String startSeckilDBPCC_ONE(long seckillId,long userId);
+    /**
+     * 秒杀 三、数据库悲观锁
+     * @param seckillId
+     * @param userId
+     * @return
+     */
+    String startSeckilDBPCC_TWO(long seckillId,long userId);
+    /**
+     * 秒杀 三、数据库乐观锁
+     * @param seckillId
+     * @param userId
+     * @return
+     */
+    String startSeckilDBOCC(long seckillId,long userId,long number);
 }

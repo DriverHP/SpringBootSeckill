@@ -6,6 +6,10 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+
+/**
+ * 两个@Id即复合主键
+ */
 @Data
 @Entity
 @Table(name = "success_killed")

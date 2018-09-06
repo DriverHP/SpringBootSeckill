@@ -20,4 +20,6 @@ public class Seckill implements Serializable {
     private Timestamp startTime;
     private Timestamp endTime;
     private Timestamp createTime;
+    @Version
+    private long version;
 }
